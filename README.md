@@ -23,8 +23,5 @@ CodeBloom is a multipage website showcasing a tech company that provides web dev
 - Footer fixed at the bottom of the page.
 
 ## Deployment
-The site is hosted on **GitHub Pages**. To deploy:
-1. Push your code to a GitHub repository.
-2. Go to repository settings → Pages → Select `main` branch.
-3. Access your live URL.
+The site is hosted on **Vercel**. To deploy:
 
