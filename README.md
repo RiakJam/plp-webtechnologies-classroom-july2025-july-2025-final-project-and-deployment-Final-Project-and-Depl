@@ -4,7 +4,7 @@
 CodeBloom is a multipage website showcasing a tech company that provides web development, mobile applications, consultancy, and other digital solutions. The site is fully responsive, interactive, and uses HTML5, CSS3, and JavaScript.
 
 ## Live URL
-[View Live Site](https://yourusername.github.io/CodeBloom/)
+[View Live Site](https://plp-webtechnologies-classroom-july2-gamma.vercel.app/)
 
 ## Pages
 - **Home:** Introduction, key features, and call-to-action.
