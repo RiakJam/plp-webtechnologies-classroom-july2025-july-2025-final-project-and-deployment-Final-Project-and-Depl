@@ -1,0 +1,328 @@
+/* -------------------------- General Reset -------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* -------------------------- Body & Layout -------------------------- */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* -------------------------- Header & Nav -------------------------- */
+header {
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav .nav-links li a.active {
+    text-decoration: underline;
+}
+
+nav .nav-toggle {
+    display: none;
+    background-color: white;
+    color: #0d6efd;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* -------------------------- Hero Sections -------------------------- */
+.hero,
+.about-hero,
+.services-hero,
+.contact-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #e9f5ff;
+}
+
+.hero h1,
+.about-hero h1,
+.services-hero h1,
+.contact-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p,
+.about-hero p,
+.services-hero p,
+.contact-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn,
+.contact-form button {
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.hero .btn:hover,
+.contact-form button:hover {
+    background-color: #084298;
+}
+
+/* -------------------------- Features & Services Cards -------------------------- */
+.features,
+.services-list,
+.about-content {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.feature-cards,
+.services-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card,
+.service-card {
+    background-color: #f0f8ff;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card img,
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.card:hover,
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+/* -------------------------- About Content -------------------------- */
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.text-image {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.text-image.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-image .text {
+    flex: 1 1 400px;
+}
+
+.text-image .image {
+    flex: 1 1 400px;
+}
+
+.text-image .image img {
+    width: 100%;
+    border-radius: 10px;
+}
+/* -------------------------- Responsive Layout for Small Screens -------------------------- */
+@media (max-width: 768px) {
+    .text-image {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-image.reverse {
+        flex-direction: column;
+    }
+
+    .text-image .text,
+    .text-image .image {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .text-image .image img {
+        width: 100%;
+        height: auto;
+    }
+    
+}
+/* Hero Section Image Responsiveness */
+.hero-image {
+    width: 100%;
+    max-width: 1200px; /* Optional: keeps image from being too wide on large screens */
+    height: auto;
+    display: block;
+    margin: 20px auto 0 auto; /* Centers the image */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .hero-image {
+        width: 100%;
+        height: auto;
+        margin: 20px 0 0 0;
+    }
+}
+
+
+/* -------------------------- Contact Form & Info -------------------------- */
+/* Contact Section: two columns */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    flex: 1 1 400px;
+    /* allow it to grow and shrink */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-info {
+    flex: 1 1 300px;
+    text-align: left;
+}
+
+.contact-info h2 {
+    margin-bottom: 10px;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+}
+
+
+/* -------------------------- Footer -------------------------- */
+footer {
+    background-color: #0d6efd;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* -------------------------- Responsive -------------------------- */
+@media (max-width: 1024px) {
+    .text-image {
+        flex-direction: column;
+    }
+
+    .text-image.reverse {
+        flex-direction: column;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #0d6efd;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 100;
+        width: 200px;
+    }
+
+    nav .nav-links.show {
+        display: flex;
+    }
+
+    nav .nav-toggle {
+        display: block;
+    }
+
+    .feature-cards,
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
